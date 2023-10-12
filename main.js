@@ -4,6 +4,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 
 app.use(
+  "/",
   createProxyMiddleware({
     target: "https://api.openai.com/",
     changeOrigin: true,
